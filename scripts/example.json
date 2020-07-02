@@ -1,0 +1,328 @@
+{
+  "results": [
+      {
+          "vegetarian": false,
+          "vegan": false,
+          "glutenFree": false,
+          "dairyFree": false,
+          "veryHealthy": false,
+          "cheap": false,
+          "veryPopular": false,
+          "sustainable": false,
+          "weightWatcherSmartPoints": 5,
+          "gaps": "no",
+          "lowFodmap": false,
+          "preparationMinutes": 15,
+          "cookingMinutes": 25,
+          "aggregateLikes": 2,
+          "spoonacularScore": 27.0,
+          "healthScore": 3.0,
+          "creditsText": "The Squishy Monster",
+          "sourceName": "The Squishy Monster",
+          "pricePerServing": 37.7,
+          "id": 628337,
+          "title": "Quinoa and Broccoli Casserole",
+          "readyInMinutes": 40,
+          "servings": 7,
+          "sourceUrl": "http://www.thesquishymonster.com/2015/01/quinoa-and-broccoli-casserole.html",
+          "image": "https://spoonacular.com/recipeImages/628337-312x231.jpg",
+          "imageType": "jpg",
+          "summary": "Need a <b>vegetarian side dish</b>? Quinoan and Broccoli Casserole could be a spectacular recipe to try. This recipe makes 7 servings with <b>89 calories</b>, <b>3g of protein</b>, and <b>4g of fat</b> each. For <b>20 cents per serving</b>, this recipe <b>covers 5%</b> of your daily requirements of vitamins and minerals. This recipe is typical of Mediterranean cuisine. Not a lot of people made this recipe, and 2 would say it hit the spot. From preparation to the plate, this recipe takes about <b>40 minutes</b>. It can be enjoyed any time, but it is especially good for <b>Autumn</b>. Head to the store and pick up broccoli, butter, warm milk, and a few other things to make it today. All things considered, we decided this recipe <b>deserves a spoonacular score of 27%</b>. This score is rather bad. Try <a href=\"https://spoonacular.com/recipes/broccoli-quinoa-casserole-580262\">Broccoli Quinoa Casserole</a>, <a href=\"https://spoonacular.com/recipes/broccoli-quinoa-casserole-553553\">Broccoli quinoa casserole</a>, and <a href=\"https://spoonacular.com/recipes/broccoli-quinoa-casserole-535783\">Broccoli Quinoa Casserole</a> for similar recipes.",
+          "cuisines": [
+              "Mediterranean",
+              "Italian",
+              "European"
+          ],
+          "dishTypes": [
+              "side dish"
+          ],
+          "diets": [],
+          "occasions": [
+              "fall",
+              "winter"
+          ],
+          "winePairing": {},
+          "analyzedInstructions": [
+              {
+                  "name": "",
+                  "steps": [
+                      {
+                          "number": 1,
+                          "step": "First, rinse and drain the quinoa to wash away the bitter outer shell. You can either cook it on the stovetop or in a rice cooker. For  cup of quinoa, I used 1 c chicken stock.In a pan, melt the butter, low and slow.",
+                          "ingredients": [
+                              {
+                                  "id": 20035,
+                                  "name": "quinoa",
+                                  "localizedName": "quinoa",
+                                  "image": "uncooked-quinoa.png"
+                              }
+                          ],
+                          "equipment": [
+                              {
+                                  "id": 404662,
+                                  "name": "rice cooker",
+                                  "localizedName": "rice cooker",
+                                  "image": "rice-cooker.jpg"
+                              },
+                              {
+                                  "id": 404794,
+                                  "name": "stove",
+                                  "localizedName": "stove",
+                                  "image": "oven.jpg"
+                              },
+                              {
+                                  "id": 404645,
+                                  "name": "frying pan",
+                                  "localizedName": "frying pan",
+                                  "image": "pan.png"
+                              }
+                          ]
+                      },
+                      {
+                          "number": 2,
+                          "step": "Whisk in the flour for 1-2 minutes to draw out the raw flour taste and slowly pour in the milk {you can also use stock}. Bump up the heat to medium and whisk constantly to prevent lumps. As it cooks, it will thicken.Stir in the cheese and broccoli.",
+                          "ingredients": [
+                              {
+                                  "id": 11090,
+                                  "name": "broccoli",
+                                  "localizedName": "broccoli",
+                                  "image": "broccoli.jpg"
+                              },
+                              {
+                                  "id": 1041009,
+                                  "name": "cheese",
+                                  "localizedName": "cheese",
+                                  "image": "cheddar-cheese.png"
+                              },
+                              {
+                                  "id": 1077,
+                                  "name": "milk",
+                                  "localizedName": "milk",
+                                  "image": "milk.png"
+                              }
+                          ],
+                          "equipment": [
+                              {
+                                  "id": 404661,
+                                  "name": "whisk",
+                                  "localizedName": "whisk",
+                                  "image": "whisk.png"
+                              }
+                          ],
+                          "length": {
+                              "number": 2,
+                              "unit": "minutes"
+                          }
+                      },
+                      {
+                          "number": 3,
+                          "step": "Transfer to a casserole dish, cover with more cheese then foil, and bake at 350 for 20-30 minutes.",
+                          "ingredients": [
+                              {
+                                  "id": 1041009,
+                                  "name": "cheese",
+                                  "localizedName": "cheese",
+                                  "image": "cheddar-cheese.png"
+                              }
+                          ],
+                          "equipment": [
+                              {
+                                  "id": 404635,
+                                  "name": "casserole dish",
+                                  "localizedName": "casserole dish",
+                                  "image": "casserole-dish.png"
+                              },
+                              {
+                                  "id": 404784,
+                                  "name": "oven",
+                                  "localizedName": "oven",
+                                  "image": "oven.jpg"
+                              },
+                              {
+                                  "id": 404765,
+                                  "name": "aluminum foil",
+                                  "localizedName": "aluminum foil",
+                                  "image": "aluminum-foil.png"
+                              }
+                          ],
+                          "length": {
+                              "number": 30,
+                              "unit": "minutes"
+                          }
+                      }
+                  ]
+              }
+          ],
+          "usedIngredientCount": 2,
+          "missedIngredientCount": 3,
+          "likes": 0
+      },
+      {
+          "vegetarian": false,
+          "vegan": false,
+          "glutenFree": false,
+          "dairyFree": false,
+          "veryHealthy": false,
+          "cheap": false,
+          "veryPopular": true,
+          "sustainable": false,
+          "weightWatcherSmartPoints": 7,
+          "gaps": "no",
+          "lowFodmap": false,
+          "aggregateLikes": 1054,
+          "spoonacularScore": 79.0,
+          "healthScore": 14.0,
+          "creditsText": "Skinny Ms",
+          "sourceName": "Skinny Ms",
+          "pricePerServing": 79.29,
+          "id": 630476,
+          "title": "Slow Cooker Cheesy Broccoli and Cauliflower Casserole",
+          "readyInMinutes": 120,
+          "servings": 6,
+          "sourceUrl": "http://skinnyms.com/slow-cooker-cheesy-broccoli-cauliflower-casserole/",
+          "image": "https://spoonacular.com/recipeImages/630476-312x231.jpg",
+          "imageType": "jpg",
+          "summary": "Slow Cooker Cheesy Broccoli and Cauliflower Casserole might be just the side dish you are searching for. One serving contains <b>237 calories</b>, <b>11g of protein</b>, and <b>18g of fat</b>. For <b>79 cents per serving</b>, this recipe <b>covers 12%</b> of your daily requirements of vitamins and minerals. 1054 people have made this recipe and would make it again. Head to the store and pick up extra virgin olive oil, salt, cauliflower, and a few other things to make it today. From preparation to the plate, this recipe takes about <b>2 hours</b>. It is perfect for <b>Autumn</b>. All things considered, we decided this recipe <b>deserves a spoonacular score of 82%</b>. This score is amazing. Similar recipes include <a href=\"https://spoonacular.com/recipes/slow-cooker-cheesy-cauliflower-and-broccoli-571753\">Slow Cooker Cheesy Cauliflower and Broccoli</a>, <a href=\"https://spoonacular.com/recipes/slow-cooker-cheesy-broccoli-chicken-casserole-110491\">Slow Cooker Cheesy Broccoli Chicken Casserole</a>, and <a href=\"https://spoonacular.com/recipes/cheesy-broccoli-cauliflower-casserole-406484\">Cheesy Broccoli Cauliflower Casserole</a>.",
+          "cuisines": [],
+          "dishTypes": [
+              "side dish"
+          ],
+          "diets": [],
+          "occasions": [
+              "fall",
+              "winter"
+          ],
+          "winePairing": {},
+          "analyzedInstructions": [
+              {
+                  "name": "",
+                  "steps": [
+                      {
+                          "number": 1,
+                          "step": "Boil the cauliflower and broccoli florets in a pot of boiling salted water then drain well.Using a manual masher, mash the broccoli &amp; cauliflower coarsely.Rub the bottom and lower sides of the slow cooker with extra virgin olive oil.",
+                          "ingredients": [
+                              {
+                                  "id": 1034053,
+                                  "name": "extra virgin olive oil",
+                                  "localizedName": "extra virgin olive oil",
+                                  "image": "olive-oil.jpg"
+                              },
+                              {
+                                  "id": 10011090,
+                                  "name": "broccoli florets",
+                                  "localizedName": "broccoli florets",
+                                  "image": "broccoli.jpg"
+                              },
+                              {
+                                  "id": 11135,
+                                  "name": "cauliflower",
+                                  "localizedName": "cauliflower",
+                                  "image": "cauliflower.jpg"
+                              },
+                              {
+                                  "id": 11090,
+                                  "name": "broccoli",
+                                  "localizedName": "broccoli",
+                                  "image": "broccoli.jpg"
+                              }
+                          ],
+                          "equipment": [
+                              {
+                                  "id": 404718,
+                                  "name": "slow cooker",
+                                  "localizedName": "slow cooker",
+                                  "image": "slow-cooker.jpg"
+                              },
+                              {
+                                  "id": 404752,
+                                  "name": "pot",
+                                  "localizedName": "pot",
+                                  "image": "stock-pot.jpg"
+                              }
+                          ]
+                      },
+                      {
+                          "number": 2,
+                          "step": "Place the broccoli and cauliflower in the slow cooker.",
+                          "ingredients": [
+                              {
+                                  "id": 11135,
+                                  "name": "cauliflower",
+                                  "localizedName": "cauliflower",
+                                  "image": "cauliflower.jpg"
+                              },
+                              {
+                                  "id": 11090,
+                                  "name": "broccoli",
+                                  "localizedName": "broccoli",
+                                  "image": "broccoli.jpg"
+                              }
+                          ],
+                          "equipment": [
+                              {
+                                  "id": 404718,
+                                  "name": "slow cooker",
+                                  "localizedName": "slow cooker",
+                                  "image": "slow-cooker.jpg"
+                              }
+                          ]
+                      },
+                      {
+                          "number": 3,
+                          "step": "Add the remaining extra virgin olive oil, Parmesan, salt, and pepper.Sprinkle the breadcrumbs on the top then layer the cheese, covering the whole top.Set on low for 2 hours.",
+                          "ingredients": [
+                              {
+                                  "id": 1034053,
+                                  "name": "extra virgin olive oil",
+                                  "localizedName": "extra virgin olive oil",
+                                  "image": "olive-oil.jpg"
+                              },
+                              {
+                                  "id": 18079,
+                                  "name": "breadcrumbs",
+                                  "localizedName": "breadcrumbs",
+                                  "image": "breadcrumbs.jpg"
+                              },
+                              {
+                                  "id": 1033,
+                                  "name": "parmesan",
+                                  "localizedName": "parmesan",
+                                  "image": "parmesan.jpg"
+                              },
+                              {
+                                  "id": 1041009,
+                                  "name": "cheese",
+                                  "localizedName": "cheese",
+                                  "image": "cheddar-cheese.png"
+                              },
+                              {
+                                  "id": 1002030,
+                                  "name": "pepper",
+                                  "localizedName": "pepper",
+                                  "image": "pepper.jpg"
+                              },
+                              {
+                                  "id": 2047,
+                                  "name": "salt",
+                                  "localizedName": "salt",
+                                  "image": "salt.jpg"
+                              }
+                          ],
+                          "equipment": [],
+                          "length": {
+                              "number": 120,
+                              "unit": "minutes"
+                          }
+                      }
+                  ]
+              }
+          ],
+          "usedIngredientCount": 2,
+          "missedIngredientCount": 3,
+          "likes": 0
+      }
+  ],
+  "offset": 0,
+  "number": 2,
+  "totalResults": 65
+}
