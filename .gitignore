@@ -8,6 +8,8 @@
 # testing
 /coverage
 scripts/spoon.js
+secrets.js
+firestoreCred.json
 
 # production
 /build
