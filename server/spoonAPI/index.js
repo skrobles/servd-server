@@ -6,26 +6,22 @@ const testData = require('../../scripts/example.json')
 const getRecipes = async (ingredientQuery) => {
   const ingredientList = ingredientQuery.ingredients.split(', ')
   const escapedIngredients = ingredientList.join('%2C ')
-  // const {data} = await axios({
-  //   "method":"GET",
-  //   "url":"https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch",
-  //   "headers":{
-  //   "content-type":"application/octet-stream",
-  //   "x-rapidapi-host":"spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-  //   "x-rapidapi-key": spoonApiKey,
-  //   "useQueryString":true
-  //   },"params":{
-  //   "number":"2",
-  //   "includeIngredients": escapedIngredients,
-  //   "ranking":"1",
-  //   "addRecipeInformation": true
-  //   }
-  //   })
-
-
-    const data = testData
-
-
+  const {data} = await axios({
+    "method":"GET",
+    "url":"https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch",
+    "headers":{
+    "content-type":"application/octet-stream",
+    "x-rapidapi-host":"spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+    "x-rapidapi-key": spoonApiKey,
+    "useQueryString":true
+    },"params":{
+    "number":"2",
+    "includeIngredients": escapedIngredients,
+    "ranking":"1",
+    "addRecipeInformation": true
+    }
+    })
+    // const data = testData
     let ingredients
     const recipes = data.results.map(result => {
 

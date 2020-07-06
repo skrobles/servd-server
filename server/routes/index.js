@@ -1,5 +1,5 @@
-// const Router = require('koa-router')
-// const router = new Router()
+const Router = require('koa-router')
+const router = new Router()
 
 module.exports = (router) => {
   // router.prefix('/v1')
