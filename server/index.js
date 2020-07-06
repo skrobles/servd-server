@@ -5,6 +5,7 @@ const Router = require('koa-router')
 const router = new Router()
 const mount = require('koa-mount')
 const path = require('path')
+const koaBody = require('koa-body');
 const PORT = process.env.PORT || 8080
 const {getRecipes} = require('./spoonAPI')
 
@@ -15,22 +16,15 @@ module.exports = app
 // setup the logger
 app.use(morgan('dev'))
 
-//static middleware
-
+//set up body parser
+app.use(koaBody());
 
 // API routes
 require('./routes')(router)
-// app.use(router.routes())
 app.use(mount('/api', router.routes()))
 
-
+//static middleware
 app.use(require('koa-static')(path.join(__dirname, '..', 'build')))
-// app.use(async (ctx) => {
-//   console.log(ctx)
-//   const recipes = await getRecipes(['lettuce', 'tomato', 'parmesan cheese'])
-//   // console.log(recipes)
-//   ctx.body = ctx
-// })
 
 
 //start listening to requests
