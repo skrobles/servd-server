@@ -8,8 +8,12 @@ const path = require('path')
 const koaBody = require('koa-body');
 const PORT = process.env.PORT || 8080
 const {getRecipes} = require('./spoonAPI')
+const firebase = require("firebase/app")
+require("firebase/auth")
+const {firebaseConfig} = require('../secrets')
+firebase.initializeApp(firebaseConfig)
 
-module.exports = app
+module.exports = {app, firebase}
 
 //Middleware
 
@@ -18,6 +22,9 @@ app.use(morgan('dev'))
 
 //set up body parser
 app.use(koaBody());
+
+
+
 
 // API routes
 require('./routes')(router)
