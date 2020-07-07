@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "nodemon server",
-    "deploy": "script/deploy"
+    "deploy": "scripts/deploy"
   },
   "eslintConfig": {
     "extends": "react-app"
