@@ -22,7 +22,7 @@ router.post('/signup', async (ctx, next) => {
   } catch (err) {
     const errorCode = err.code
     const errorMessage = err.message
-    console.log(error)
+    console.log(errorCode, errorMessage)
     next(err)
   }
 })
@@ -36,7 +36,7 @@ router.post('/signin', async (ctx, next) => {
   } catch (err) {
     const errorCode = err.code
     const errorMessage = err.message
-    console.log(err)
+    console.log(errorCode, errorMessage)
     next(err)
   }
 })
@@ -49,7 +49,7 @@ router.post('/signout', async (ctx, next) => {
   } catch (err) {
     const errorCode = err.code
     const errorMessage = err.message
-    console.log(err)
+    console.log(errorCode, errorMessage)
     next(err)
   }
 })
