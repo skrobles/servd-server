@@ -20,19 +20,11 @@
     "koa-session": "^6.0.0",
     "koa-static": "^5.0.0",
     "path": "^0.12.7",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "start-sw": "http-server ./build",
-    "start-server": "nodemon server"
+    "start": "nodemon server",
+    "deploy": "script/deploy"
   },
   "eslintConfig": {
     "extends": "react-app"
