@@ -28,6 +28,16 @@ app.use(koaBody());
 app.keys = keys
 app.use(session(app))
 
+//error handling middleware
+app.use(async (ctx, next) => {
+    try {
+      await next();
+    } catch (err) {
+      ctx.status = err.status || 500;
+      ctx.body = err.message;
+      ctx.app.emit('error', err, ctx);
+    }
+  });
 
 // API routes
 require('./routes')(router)

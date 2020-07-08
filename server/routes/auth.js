@@ -13,9 +13,8 @@ router.post('/signup', async (ctx, next) => {
     ctx.session.user = user
     ctx.body = getUserData(user)
   } catch (err) {
-    const errorCode = err.code
-    const errorMessage = err.message
-    console.log(errorCode, errorMessage)
+    console.log(err.code, err.message)
+    ctx.throw(err.code, err.message)
     next(err)
   }
 })
@@ -27,9 +26,8 @@ router.post('/signin', async (ctx, next) => {
     ctx.session.user = user
     ctx.body = getUserData(user)
   } catch (err) {
-    const errorCode = err.code
-    const errorMessage = err.message
-    console.log(errorCode, errorMessage)
+    console.log(err.code, err.message)
+    ctx.throw(err.code, err.message)
     next(err)
   }
 })
@@ -40,9 +38,8 @@ router.post('/signout', async (ctx, next) => {
     ctx.session = null
     ctx.body = "logout success"
   } catch (err) {
-    const errorCode = err.code
-    const errorMessage = err.message
-    console.log(errorCode, errorMessage)
+    console.log(err.code, err.message)
+    ctx.throw(err.code, err.message)
     next(err)
   }
 })
