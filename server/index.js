@@ -5,8 +5,9 @@ const Router = require('koa-router')
 const router = new Router()
 const mount = require('koa-mount')
 const path = require('path')
-const koaBody = require('koa-body');
-const session = require('koa-session');
+const koaBody = require('koa-body')
+const session = require('koa-session')
+const cors = require('@koa/cors')
 const PORT = process.env.PORT || 8080
 const {getRecipes} = require('./spoonAPI')
 const firebase = require("firebase/app")
@@ -22,7 +23,10 @@ module.exports = {app, firebase}
 app.use(morgan('dev'))
 
 //set up body parser
-app.use(koaBody());
+app.use(koaBody())
+
+//enable CORS
+app.use(cors())
 
 //session middleware
 app.keys = keys
