@@ -10,7 +10,7 @@ router.post('/signup', async (ctx, next) => {
   try {
     const {email, password} = ctx.request.body
     const user = await firebase.auth().createUserWithEmailAndPassword(email, password)
-    ctx.session.user = user
+    ctx.session.user = user.user
     ctx.body = getUserData(user)
   } catch (err) {
     console.log(err.code, err.message)
@@ -23,7 +23,7 @@ router.post('/signin', async (ctx, next) => {
   try {
     const {email, password} = ctx.request.body
     const user = await firebase.auth().signInWithEmailAndPassword(email, password)
-    ctx.session.user = user
+    ctx.session.user = user.user
     ctx.body = getUserData(user)
   } catch (err) {
     console.log(err.code, err.message)
