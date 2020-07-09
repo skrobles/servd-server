@@ -43,3 +43,11 @@ router.post('/signout', async (ctx, next) => {
     next(err)
   }
 })
+
+router.get('/', (ctx, next) => {
+  try {
+    ctx.body = getUserData(ctx.session.user) || {}
+  } catch (err) {
+    next(err)
+  }
+})
