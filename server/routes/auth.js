@@ -58,4 +58,17 @@ router.post("/signout", async (ctx, next) => {
     ctx.throw(err.code, err.message);
     next(err);
   }
-});
+})
+
+router.get('/', (ctx, next) => {
+  try {
+    const user = ctx.session.user ? getUserData(ctx.session.user) : {WORK:'HELLOOO'}
+    // console.log('get route>>>>>', ctx.session)
+    console.log('>>>>>*******req', ctx.request)
+    console.log('>>>>>*******sess', ctx.session)
+    ctx.body = user
+  } catch (err) {
+    next(err)
+  }
+})
+
