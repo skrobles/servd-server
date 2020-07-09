@@ -24,6 +24,7 @@ router.post('/signin', async (ctx, next) => {
     const {email, password} = ctx.request.body
     const user = await firebase.auth().signInWithEmailAndPassword(email, password)
     ctx.session.user = user
+    console.log('sign in route>>>>', ctx.session)
     ctx.body = getUserData(user)
   } catch (err) {
     console.log(err.code, err.message)
@@ -46,7 +47,10 @@ router.post('/signout', async (ctx, next) => {
 
 router.get('/', (ctx, next) => {
   try {
-    const user = ctx.session.user ? getUserData(ctx.session.user) : {}
+    const user = ctx.session.user ? getUserData(ctx.session.user) : {WORK:'HELLOOO'}
+    // console.log('get route>>>>>', ctx.session)
+    console.log('>>>>>*******req', ctx.request)
+    console.log('>>>>>*******sess', ctx.session)
     ctx.body = user
   } catch (err) {
     next(err)
