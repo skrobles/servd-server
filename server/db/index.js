@@ -33,10 +33,10 @@ const saveRecipe = async (recipe, userId) => {
   try {
     if (!parseRecipe(recipe)) return 0
     const addedRecipe = await db.collection(userId).doc(recipe.title).set(recipe)
-    console.log(addedRecipe)
+    return addedRecipe
   } catch(err) {
     console.log(err)
-    return(err)
+    return 0
   }
 }
 

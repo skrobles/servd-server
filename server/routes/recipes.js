@@ -7,23 +7,26 @@ module.exports = router.routes()
 
 //search recipes by ingredients
 router.get('/', async (ctx, next) => {
+  try {
   const recipes = await getRecipes(ctx.query)
   console.log(recipes)
   ctx.body = recipes
+  } catch (err) {
+    ctx.throw(500, 'Could not get recipes')
+    next(err)
+  }
 })
 
 //save a recipe to a user account
 router.post('/', async (ctx, next) => {
-  try {
-    // const recipe = ctx.request.body
+  if (!ctx.session.user) ctx.throw(400, 'User not logged in')
+  else try {
     const userId = ctx.session.user.uid
     const recipe = await saveRecipe(ctx.request.body, userId)
-    console.log(recipe)
-    // console.log("posted recipe", recipe)
-    // console.log("user on session", ctx.session.user.uid)
-    ctx.body = ctx.session.user.uid
+    if (!recipe) ctx.throw(Error)
+    ctx.status = 201
   } catch(err) {
-    next(err)
+    ctx.throw(400, 'Could not add recipe')
   }
 })
 
