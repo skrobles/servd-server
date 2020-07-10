@@ -30,15 +30,19 @@ router.post('/', async (ctx, next) => {
   }
 })
 
+//get a users saved recipes
+router.get('/saved', async (ctx, next) => {
+  if (!ctx.session.user) ctx.throw(400, 'User not logged in')
+  else try {
+    const recipes = []
+    await db.collection(ctx.session.user.uid).get().then(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+          recipes.push(doc.data())
+      });
+    });
+    ctx.body = recipes;
+  } catch(err) {
+    next(err)
+  }
+})
 
-// db.collection("cities").doc("LA").set({
-  //   name: "Los Angeles",
-  //   state: "CA",
-  //   country: "USA"
-  // })
-  // .then(function() {
-  //   console.log("Document successfully written!");
-  // })
-  // .catch(function(error) {
-  //   console.error("Error writing document: ", error);
-  // });
