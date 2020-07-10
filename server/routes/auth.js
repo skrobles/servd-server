@@ -24,8 +24,8 @@ router.post("/signup", async (ctx, next) => {
     const user = await firebase_auth_wrap(
       firebase.auth().createUserWithEmailAndPassword(email, password)
     );
-    ctx.session.user = user;
-    ctx.body = getUserData(user);
+    ctx.session.user = user.user;
+    ctx.body = getUserData(user.user);
   } catch (err) {
     console.log(err.code, err.message);
     ctx.throw(err.code, err.message);
@@ -39,8 +39,8 @@ router.post("/signin", async (ctx, next) => {
     const user = await firebase_auth_wrap(
       firebase.auth().signInWithEmailAndPassword(email, password)
     );
-    ctx.session.user = user;
-    ctx.body = getUserData(user);
+    ctx.session.user = user.user;
+    ctx.body = getUserData(user.user);
   } catch (err) {
     console.log(err.code, err.message);
     ctx.throw(err.code, err.message);
@@ -60,15 +60,12 @@ router.post("/signout", async (ctx, next) => {
   }
 })
 
+
 router.get('/', (ctx, next) => {
   try {
-    const user = ctx.session.user ? getUserData(ctx.session.user) : {WORK:'HELLOOO'}
-    // console.log('get route>>>>>', ctx.session)
-    console.log('>>>>>*******req', ctx.request)
-    console.log('>>>>>*******sess', ctx.session)
+    const user = ctx.session.user ? getUserData(ctx.session.user) : {}
     ctx.body = user
   } catch (err) {
     next(err)
   }
 })
-

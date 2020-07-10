@@ -10,6 +10,7 @@
 scripts/spoon.js
 secrets.js
 firestoreCred.json
+firebaseAConfig.json
 
 # production
 /build
