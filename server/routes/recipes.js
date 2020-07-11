@@ -48,11 +48,9 @@ router.get('/saved', async (ctx, next) => {
 
 //remove a recipe from a user's account
 router.delete('/:title', async (ctx, next) => {
-  console.log("params", ctx.params.title)
   if (!ctx.session.user) ctx.throw(400, 'Must be logged in to remove a recipe')
   else try {
-    const removedRecipe = await db.collection(ctx.session.user.uid).doc(ctx.params.title).delete()
-    console.log(removedRecipe)
+    await db.collection(ctx.session.user.uid).doc(ctx.params.title).delete()
     ctx.status = 200
   } catch (err) {
     ctx.throw(500, 'Error removing recipe')
