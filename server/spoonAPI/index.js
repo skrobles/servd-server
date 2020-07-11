@@ -1,6 +1,6 @@
 const { spoonApiKey } = require("../../secrets");
 const axios = require("axios");
-//const testData = require("../../scripts/example.json");
+const testData = require("../../scripts/example.json");
 
 const getRecipes = async (ingredientQuery) => {
   const ingredientList = ingredientQuery.ingredients.split(", ");
