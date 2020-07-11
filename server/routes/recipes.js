@@ -12,6 +12,7 @@ router.get('/', async (ctx, next) => {
   console.log(recipes)
   ctx.body = recipes
   } catch (err) {
+    console.log(err)
     ctx.throw(500, 'Could not get recipes')
     next(err)
   }
@@ -26,6 +27,7 @@ router.post('/', async (ctx, next) => {
     if (!recipe) ctx.throw(Error)
     ctx.status = 201
   } catch(err) {
+    console.log(err)
     ctx.throw(400, 'Could not add recipe')
   }
 })
@@ -42,6 +44,7 @@ router.get('/saved', async (ctx, next) => {
     });
     ctx.body = recipes;
   } catch(err) {
+    console.log(err)
     next(err)
   }
 })
@@ -53,6 +56,7 @@ router.delete('/:title', async (ctx, next) => {
     await db.collection(ctx.session.user.uid).doc(ctx.params.title).delete()
     ctx.status = 200
   } catch (err) {
+    console.log(err)
     ctx.throw(500, 'Error removing recipe')
     next(err)
   }
