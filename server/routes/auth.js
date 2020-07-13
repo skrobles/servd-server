@@ -60,6 +60,20 @@ router.post("/signout", async (ctx, next) => {
   }
 })
 
+router.post('/google', async (ctx, next) => {
+  try {
+    const id_token = ctx.request.body.token
+    const credential = await firebase.auth.GoogleAuthProvider.credential(id_token);
+    const user = await firebase.auth().signInWithCredential(credential)
+    ctx.session.user = user.user;
+    ctx.body = getUserData(user.user);
+  } catch (err) {
+    console.log(err.code, err.message);
+    ctx.throw(err.code, err.message);
+    next(err)
+  }
+})
+
 
 router.get('/', (ctx, next) => {
   try {
