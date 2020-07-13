@@ -83,3 +83,28 @@ router.get('/', (ctx, next) => {
     next(err)
   }
 })
+
+
+router.put('/', async (ctx, next) => {
+  if (!ctx.session.user) ctx.throw(404, 'Not logged in')
+  try {
+    const { name, email, password } = ctx.request.body
+    const user = await firebase.auth().currentUser;
+      if (name) {
+        await user.updateProfile({displayName: name})
+      }
+      if (email) {
+        await user.updateEmail(email)
+      }
+      if (password) {
+        await user.updatePassword(password)
+      }
+
+    const updatedUser = getUserData(user)
+    ctx.session.user = user
+    ctx.body = updatedUser
+  } catch (err) {
+    ctx.throw(err.status, err.message)
+    next(err)
+  }
+})
