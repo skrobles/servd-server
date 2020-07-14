@@ -29,7 +29,6 @@ router.post("/signup", async (ctx, next) => {
   } catch (err) {
     console.log(err.code, err.message);
     ctx.throw(err.code, err.message);
-    next(err);
   }
 });
 
@@ -44,7 +43,6 @@ router.post("/signin", async (ctx, next) => {
   } catch (err) {
     console.log(err.code, err.message);
     ctx.throw(err.code, err.message);
-    next(err);
   }
 });
 
@@ -56,7 +54,6 @@ router.post("/signout", async (ctx, next) => {
   } catch (err) {
     console.log(err.code, err.message);
     ctx.throw(err.code, err.message);
-    next(err);
   }
 })
 
@@ -70,7 +67,6 @@ router.post('/google', async (ctx, next) => {
   } catch (err) {
     console.log(err.code, err.message);
     ctx.throw(err.code, err.message);
-    next(err)
   }
 })
 
@@ -104,7 +100,7 @@ router.put('/', async (ctx, next) => {
     ctx.session.user = user
     ctx.body = updatedUser
   } catch (err) {
+    console.log(error)
     ctx.throw(err.status, err.message)
-    next(err)
   }
 })
