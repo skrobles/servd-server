@@ -19,7 +19,8 @@ const getRecipes = async (ingredientQuery) => {
       number: "2",
       includeIngredients: escapedIngredients,
       ranking: "1",
-      addRecipeInformation: true
+      addRecipeInformation: true,
+      instructionsRequired: true
     }
   });
   // const data = testData
