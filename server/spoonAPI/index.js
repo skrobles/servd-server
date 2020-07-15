@@ -3,6 +3,7 @@ const axios = require("axios");
 const testData = require("../../scripts/example.json");
 
 const getRecipes = async (ingredientQuery) => {
+  const offset = Math.floor(Math.random() * 50)
   const ingredientList = ingredientQuery.ingredients.split(", ");
   const escapedIngredients = ingredientList.join("%2C ");
   const { data } = await axios({
@@ -16,11 +17,12 @@ const getRecipes = async (ingredientQuery) => {
       useQueryString: true
     },
     params: {
-      number: "2",
+      number: "5",
       includeIngredients: escapedIngredients,
       ranking: "1",
       addRecipeInformation: true,
-      instructionsRequired: true
+      instructionsRequired: true,
+      offset: offset
     }
   });
   // const data = testData
