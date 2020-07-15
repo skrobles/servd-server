@@ -107,7 +107,7 @@ router.put('/', async (ctx, next) => {
     ctx.session.user = user
     ctx.body = updatedUser
   } catch (err) {
-    console.log(error)
+    console.log(err)
     ctx.throw(err.status, err.message)
   }
 })
