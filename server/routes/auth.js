@@ -1,7 +1,8 @@
 const Router = require("koa-router");
 const router = new Router();
 const { firebase } = require("../index");
-const { getUserData } = require("../utility");
+const {admin } = require('../db')
+const { getUserData, parseUserData } = require("../utility");
 
 module.exports = router.routes();
 
@@ -85,26 +86,29 @@ router.put('/', async (ctx, next) => {
   console.log("**********in put request", ctx.request.body)
   if (!ctx.session.user) ctx.throw(404, 'Not logged in')
   try {
-    const { name, email, password } = ctx.request.body
-    let user = user = await firebase.auth().currentUser;
-    await user.reload();
-    user = await firebase.auth().currentUser;
-    console.log("*******user", user)
-      if (name) {
-        await user.updateProfile({displayName: name})
-        console.log("*****in name", name)
-      }
-      if (email) {
-        await user.updateEmail(email)
-        console.log("*****in email", email)
-      }
-      if (password) {
-        await user.updatePassword(password)
-        console.log("*****in password", password)
-      }
+    const updatedInfo = parseUserData(ctx.request.body)
+    console.log("updated info", updatedInfo)
+    const user = await admin.auth().updateUser(ctx.session.user.uid, updatedInfo)
+    console.log("updated user", user)
+    // let user = await firebase.auth().currentUser;
+    // await user.reload();
+    // user = await firebase.auth().currentUser;
+    // console.log("*******user", user)
+    //   if (name) {
+    //     await user.updateProfile({displayName: name})
+    //     console.log("*****in name", name)
+    //   }
+    //   if (email) {
+    //     await user.updateEmail(email)
+    //     console.log("*****in email", email)
+    //   }
+    //   if (password) {
+    //     await user.updatePassword(password)
+    //     console.log("*****in password", password)
+    //   }
 
     const updatedUser = getUserData(user)
-    ctx.session.user = user
+    ctx.session.user = updatedUser
     ctx.body = updatedUser
   } catch (err) {
     console.log(err)
