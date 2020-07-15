@@ -28,4 +28,4 @@ const saveRecipe = async (recipe, userId) => {
   }
 }
 
-module.exports = {db, saveRecipe}
+module.exports = {db, saveRecipe, admin}
