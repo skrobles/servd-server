@@ -26,7 +26,6 @@ app.use(morgan('dev'))
 app.use(koaBody())
 
 //enable CORS
-// app.use(cors())
 app.use(cors({credentials:true}))
 
 //session middleware
