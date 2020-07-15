@@ -106,10 +106,8 @@ router.put('/', async (ctx, next) => {
     //     await user.updatePassword(password)
     //     console.log("*****in password", password)
     //   }
-
-    const updatedUser = getUserData(user)
-    ctx.session.user = updatedUser
-    ctx.body = updatedUser
+    ctx.session.user = user
+    ctx.body = getUserData(user)
   } catch (err) {
     console.log(err)
     ctx.throw(err.status, err.message)
